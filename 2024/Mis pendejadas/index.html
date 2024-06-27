@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>¿Quieres ser mi novia?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="heart"></div>  
+        <div id="container">
+            <!--<h1><span style="background: linear-gradient(#7d09b3, #dc2188); -webkit-background-clip: text;background-clip: text; -webkit-text-fill-color: transparent;">¿Quieres ser mi novia?</span></h1>-->
+            <h1><span style="background: linear-gradient(#ed321d, #cc8f6e); -webkit-background-clip: text;background-clip: text; -webkit-text-fill-color: transparent;">¿Quieres ser mi novia?</span></h1>
+            <div id="buttons">
+                <button onclick="AccionParaElSi()" id="btnSi">¡Si!❤️‍🩹</button>
+                <button onclick="AccionParaElNo()" id ="btnNo" onmouseover="MovBoton">No 🥹</button>
+            </div>
+        </div>
+
+        <script>
+            function AccionParaElSi() {
+                const respuesta = confirm("¡Gracias por aceptar ser parte mi vida a continuación te dedico lo siguiente...Espero y te guste mucho! ❤️")
+                if (respuesta) {
+                    window.location.href = "opcionsi.html";
+                }else{
+                    alert("Espero puedas reconsiderarlo 😊")
+                }
+            }
+
+            function AccionParaElNo() {
+            let boton = document.querySelector("#btnNo");
+            boton.addEventListener("mouseover", function(e) {
+                // Cambia la posición del botón
+                boton.style.position = "fixed";
+                boton.style.left = (Math.random() * (window.innerWidth - 50)) + "px";
+                boton.style.top = (Math.random() * (window.innerHeight - 50)) + "px";
+            });
+        }
+
+        // Llama a la función para activar el movimiento d
+AccionParaElNo();
+
+
+            //function AccionParaElNo() {
+               // const width = window.innerWidth;
+                //const height = width.innerheigt;
+
+                    //const newWidth = Math.random() * width;
+                    //const newheight = Math.random() * height;
+
+                //const btnNo = document.getElementById("btnNo");
+                //btnNo.style.position = "absolute";
+                //btnNo.style.left = newWidth + "px";
+                //btnNo.style.top = newheight + "px";
+            //}
+            <!--Los  colores y frases son a tu gusto-->
+        </script>
+        <div class="avocado" >🙈Diana Ortega Barron🥹</div>
+    </body>
+</html>
